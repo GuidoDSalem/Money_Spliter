@@ -8,7 +8,12 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.KAI_Studios.money_spliter.Greeting
+import com.KAI_Studios.money_spliter.android.FirebaseCRUD.presentation.FirebaseCRUDScreen
+import com.KAI_Studios.money_spliter.android.core.presentation.Screen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,12 +26,34 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    GreetingView(Greeting().greet())
+                    MoneySpliterRoot()
                 }
             }
         }
     }
 }
+
+@Composable
+fun MoneySpliterRoot() {
+
+    val navController = rememberNavController()
+
+    NavHost(
+            navController = navController,
+            startDestination = Screen.FirebaseCRUDScreen.route
+    ){
+
+        composable(
+                route = Screen.FirebaseCRUDScreen.route,
+        ){
+            FirebaseCRUDScreen()
+        }
+
+    }
+
+
+}
+
 
 @Composable
 fun GreetingView(text: String) {
