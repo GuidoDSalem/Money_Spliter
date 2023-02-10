@@ -1,11 +1,11 @@
-package com.KAI_Studios.money_spliter.Menu.data.meppers
+package com.KAI_Studios.money_spliter.core.data.meppers
 
-import com.KAI_Studios.money_spliter.Menu.data.HistoryDto
-import com.KAI_Studios.money_spliter.Menu.domain.models.History
+import com.KAI_Studios.money_spliter.core.data.HistoryDto
+import com.KAI_Studios.money_spliter.core.domain.models.History
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 
-fun HistoryDto.toHistory(): History{
+fun HistoryDto.toHistory(): History {
     return History(
             id = id,
             created = Instant.fromEpochMilliseconds(created),
@@ -21,7 +21,7 @@ fun HistoryDto.toHistory(): History{
     )
 }
 
-fun History.toDto(): HistoryDto{
+fun History.toDto(): HistoryDto {
     return HistoryDto(
             id = id,
             created = created.toEpochMilliseconds(),

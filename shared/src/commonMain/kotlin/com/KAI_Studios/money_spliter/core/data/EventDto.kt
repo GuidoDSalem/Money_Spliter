@@ -1,4 +1,4 @@
-package com.KAI_Studios.money_spliter.Menu.data
+package com.KAI_Studios.money_spliter.core.data
 
 data class EventDto(
         val id: Int,

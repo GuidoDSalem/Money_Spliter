@@ -1,4 +1,4 @@
-package com.KAI_Studios.money_spliter.Menu.domain.models
+package com.KAI_Studios.money_spliter.core.domain.models
 
 data class User(
         val id: Int,

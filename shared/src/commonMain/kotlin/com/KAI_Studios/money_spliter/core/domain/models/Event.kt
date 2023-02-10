@@ -1,6 +1,6 @@
-package com.KAI_Studios.money_spliter.Menu.domain.models
+package com.KAI_Studios.money_spliter.core.domain.models
 
-import com.KAI_Studios.money_spliter.Menu.data.UserDto
+import com.KAI_Studios.money_spliter.core.data.UserDto
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone

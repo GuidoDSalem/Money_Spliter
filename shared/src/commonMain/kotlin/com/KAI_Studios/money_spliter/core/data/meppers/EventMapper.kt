@@ -1,9 +1,9 @@
-package com.KAI_Studios.money_spliter.Menu.data.meppers
+package com.KAI_Studios.money_spliter.core.data.meppers
 
-import com.KAI_Studios.money_spliter.Menu.data.EventDto
-import com.KAI_Studios.money_spliter.Menu.data.UserDto
-import com.KAI_Studios.money_spliter.Menu.domain.models.Event
-import com.KAI_Studios.money_spliter.Menu.domain.models.User
+import com.KAI_Studios.money_spliter.core.data.EventDto
+import com.KAI_Studios.money_spliter.core.data.UserDto
+import com.KAI_Studios.money_spliter.core.domain.models.Event
+import com.KAI_Studios.money_spliter.core.domain.models.User
 import kotlinx.datetime.*
 
 fun EventDto.toEvent(): Event {
@@ -25,7 +25,7 @@ fun EventDto.toEvent(): Event {
 
 }
 
-fun Event.toDto(): EventDto{
+fun Event.toDto(): EventDto {
     return EventDto(
             id = id,
             author = author.toDto(),
